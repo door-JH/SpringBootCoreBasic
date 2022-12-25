@@ -11,16 +11,16 @@ import org.springframework.stereotype.Component;
 
 @Configuration
 @ComponentScan(
-        basePackages = "Home.core.member",
+//        basePackages = "Home.core.member",
         excludeFilters = @ComponentScan.Filter(type = FilterType.ANNOTATION, classes = Configuration.class)
         //필터 적용
 )
 public class AutoAppConfig {
 
-    @Bean(name = "memoryMemberRepository")
-    MemberRepository memberRepository(){
-        return new MemoryMemberRepository();
-    }
+//    @Bean(name = "memoryMemberRepository")
+//    MemberRepository memberRepository(){
+//        return new MemoryMemberRepository();
+//    }
 
 
 
