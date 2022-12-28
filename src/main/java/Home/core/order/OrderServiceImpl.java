@@ -1,5 +1,6 @@
 package Home.core.order;
 
+import Home.core.annotation.MainDiscountPolicy;
 import Home.core.discount.DiscountPolicy;
 import Home.core.member.Member;
 import Home.core.member.MemberRepository;
@@ -17,7 +18,7 @@ public class OrderServiceImpl implements OrderService{
 
 //  @RequiredArgsConstructor로 생략가능. lombok기능.
     @Autowired
-    public OrderServiceImpl(MemberRepository memberRepository,DiscountPolicy discountPolicy) {
+    public OrderServiceImpl(MemberRepository memberRepository,@MainDiscountPolicy DiscountPolicy discountPolicy) {
         this.memberRepository = memberRepository;
         this.discountPolicy = discountPolicy;
     }
