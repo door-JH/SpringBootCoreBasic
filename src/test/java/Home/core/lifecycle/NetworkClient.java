@@ -33,6 +33,7 @@ public class NetworkClient{
         System.out.println("close: " + url);
     }
 
+
     @PostConstruct
     //의존관계 주입 끝날 시 호출
     public void init() throws Exception {
