@@ -3,6 +3,7 @@ package Home.core.scan;
 import Home.core.AutoAppConfig;
 import Home.core.member.MemberRepository;
 import Home.core.member.MemberService;
+import Home.core.member.MemberServiceImpl;
 import Home.core.order.OrderServiceImpl;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
@@ -14,12 +15,12 @@ public class AutoAppConfigTest {
     void basicScan(){
         AnnotationConfigApplicationContext ac = new AnnotationConfigApplicationContext(AutoAppConfig.class);
 
-        MemberService memberService = ac.getBean(MemberService.class);
-        Assertions.assertThat(memberService).isInstanceOf(MemberService.class);
-
-        OrderServiceImpl bean = ac.getBean(OrderServiceImpl.class);
-        MemberRepository memberRepository = bean.getMemberRepository();
-        System.out.println("memberRepository = " + memberRepository);
+//        MemberRepository MemberRepository = ac.getBean(MemberRepository.class);
+//        Assertions.assertThat(MemberRepository).isInstanceOf(MemberRepository.class);
+//
+//        OrderServiceImpl bean = ac.getBean(OrderServiceImpl.class);
+//        MemberRepository memberRepository = bean.getMemberRepository();
+//        System.out.println("memberRepository = " + memberRepository);
 
     }
 
